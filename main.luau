@@ -48,11 +48,10 @@ local state = {
 
 local function clearTextures()
 	for _, texture in pairs(state.textures) do
-		if texture and texture.id ~= 0 then
+		if texture then
 			lib.UnloadTexture(texture)
 		end
 	end
-
 	table.clear(state.textures)
 end
 
@@ -63,8 +62,6 @@ local function loadTexture(name)
 		return nil
 	end
 	local texture = KinemiumIconLoader.ToTextureBuffer(contents)
-	print(texture)
-	print(contents)
 	if not texture then
 		warn("Failed to decode texture: " .. name)
 		return nil
