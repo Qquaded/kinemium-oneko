@@ -59,7 +59,7 @@ end
 local function loadTexture(name)
 	local contents = GetFileContents("assets/" .. name .. ".png")
 	local texture = KinemiumIconLoader.ToTextureBuffer(contents)
-	state.textures[name] = texture
+	state.textures[name] = texture.texture
 	return texture
 end
 
