@@ -63,6 +63,8 @@ local function loadTexture(name)
 		return nil
 	end
 	local texture = KinemiumIconLoader.ToTextureBuffer(contents)
+	print(texture)
+	print(contents)
 	if not texture then
 		warn("Failed to decode texture: " .. name)
 		return nil
