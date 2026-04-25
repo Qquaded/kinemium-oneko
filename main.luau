@@ -58,7 +58,15 @@ end
 
 local function loadTexture(name)
 	local contents = GetFileContents("assets/" .. name .. ".png")
+	if not contents then
+		warn("Missing asset: " .. name)
+		return nil
+	end
 	local texture = KinemiumIconLoader.ToTextureBuffer(contents)
+	if not texture then
+		warn("Failed to decode texture: " .. name)
+		return nil
+	end
 	state.textures[name] = texture.texture
 	return texture
 end
