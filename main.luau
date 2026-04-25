@@ -2,17 +2,12 @@ local Extension = {}
 
 local KinemiumRaylib = game:GetService("KinemiumRaylib")
 local UserInputService = game:GetService("UserInputService")
+local KinemiumIconLoader = game:GetService("KinemiumIconLoader")
 
 local renderer = KinemiumRaylib.GetRenderer()
 local lib = KinemiumRaylib.GetLib()
 local const = KinemiumRaylib.GetConst()
 
-<<<<<<< HEAD
-local KinemiumIconLoader = game:GetService("KinemiumIconLoader")
-
-=======
-local ASSET_ROOT = "./kinemium-oneko-main/assets"
->>>>>>> dc8afbd7c01c0afc878740935c3d1c8b9bf5686c
 local SPRITE_SIZE = 32
 local MOVE_SPEED = 220
 local STOP_DISTANCE = 10
