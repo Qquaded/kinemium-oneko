@@ -7,7 +7,7 @@ local renderer = KinemiumRaylib.GetRenderer()
 local lib = KinemiumRaylib.GetLib()
 local const = KinemiumRaylib.GetConst()
 
-local ASSET_ROOT = "./oneko/assets"
+local ASSET_ROOT = "./kinemium-oneko-main/assets"
 local SPRITE_SIZE = 32
 local MOVE_SPEED = 220
 local STOP_DISTANCE = 10
