@@ -7,7 +7,8 @@ local renderer = KinemiumRaylib.GetRenderer()
 local lib = KinemiumRaylib.GetLib()
 local const = KinemiumRaylib.GetConst()
 
-local ASSET_ROOT = "./oneko/assets"
+local KinemiumIconLoader = game:GetService("KinemiumIconLoader")
+
 local SPRITE_SIZE = 32
 local MOVE_SPEED = 220
 local STOP_DISTANCE = 10
@@ -57,8 +58,8 @@ local function clearTextures()
 end
 
 local function loadTexture(name)
-	local texture = lib.LoadTexture(ASSET_ROOT .. "/" .. name .. ".png")
-
+	local contents = GetFileContents("assets/" .. name .. ".png")
+	local texture = KinemiumIconLoader.ToTextureBuffer(contents)
 	state.textures[name] = texture
 	return texture
 end
