@@ -1,0 +1,23 @@
+{
+    "name": "Oneko",
+    "id": "devcell.oneko",
+    "version": "1.0.0",
+    "description": "Oneko is a cat that chases the mouse cursor across the screen, an app written in the late 1980s and ported for many platforms.\nPorted from https://github.com/crgimenes/neko",
+    "icon": "icon.png",
+    "thumbnail": "thumbnail.png",
+    "homepage": "https://github.com/quadigen/Kinemium-Template-Plugin",
+    "repository": "https://github.com/quadigen/Kinemium-Template-Plugin",
+    "keywords": [
+        "cat",
+        "mouse",
+        "utility"
+    ],
+    "author": "devcell",
+    "license": "MIT",
+    "main": "main.luau",
+    "engine": {
+        "minVersion": "1.10.7"
+    },
+    "dependencies": {},
+    "permissions": []
+}
