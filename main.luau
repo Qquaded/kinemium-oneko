@@ -221,7 +221,16 @@ function Extension.activate()
 	state.currentSprite = "awake"
 	state.position = clampToWindow(getMouseTarget() + Vector2.new(-64, 32))
 
+	local texturesLoaded = false
+
 	state.renderId = renderer.Pool.new("2d", function()
+		if not texturesLoaded then
+			loadTextures()
+			texturesLoaded = true
+			print("Skipped first frame")
+			return -- skip first frame draw
+		end
+
 		local dt = lib.GetFrameTime()
 		updateCat(dt)
 		drawCat()
