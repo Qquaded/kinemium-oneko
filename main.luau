@@ -56,7 +56,7 @@ local function clearTextures()
 end
 
 local function loadTexture(name)
-	local contents = GetFileContents("assets/" .. name .. ".png")
+	local contents = require("assets/" .. name .. ".png")
 	if not contents then
 		warn("Missing asset: " .. name)
 		return nil
